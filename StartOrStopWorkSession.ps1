@@ -115,6 +115,7 @@ function Start-ProcessesGettingHandlesXmls
         catch [System.SystemException]
         {
             # (!) Работает как "continue" в обычном foreach (https://stackoverflow.com/a/7763698/5706952)
+			# В принципе логично, это как если в LINQ написать return внутри передаваемой функции
             return;
         }
     }
